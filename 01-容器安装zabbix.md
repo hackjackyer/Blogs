@@ -2,6 +2,8 @@
 
 ```bash
 
+docker network create --subnet 172.20.0.0/16 --ip-range 172.20.240.0/20 zabbix-net
+
 docker run --name mysql-server -t \
       -e MYSQL_DATABASE="zabbix" \
       -e MYSQL_USER="zabbix" \
@@ -33,7 +35,11 @@ docker run --name zabbix-web-nginx-mysql -t \
       -e MYSQL_PASSWORD="zabbix_pwd" \
       -e MYSQL_ROOT_PASSWORD="root_pwd" \
       --network=zabbix-net \
-      -p 8080:8080 \
+      -p 8000:8080 \
       --restart unless-stopped \
       -d zabbix/zabbix-web-nginx-mysql
+```
+
+```powershell
+netsh interface portproxy add v4tov4 listenport=8090 connectaddress=172.23.202.130
 ```
