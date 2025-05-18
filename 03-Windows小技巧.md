@@ -42,3 +42,13 @@ go
 exit
 ```
 ::这样就可以模拟键盘输入来操作了。
+
+## 安装系统时修改用户目录
+
+```bat
+install OS before input user and password
+shift + F10 = cmd
+>robocopy "C:\Users" "D:\Users" /E /COPYALL /XJ
+>rmdir "C:\Users" /S /Q
+>mklink /J "C:\Users" "D:\Users"
+```
