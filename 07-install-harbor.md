@@ -66,3 +66,11 @@ docker compose up -d
 ```
 
 ## 配置复制
+
+1. 添加仓库。这里以open-webui为例。参数填写如图所示
+![image](https://github.com/user-attachments/assets/180f3696-e58d-488b-81e1-b1e47d111709)
+2. 复制管理。这里以open-webui为例。参数填写如图所示
+![image](https://github.com/user-attachments/assets/2918a6c2-5809-44c7-8c77-2a98d2c14e52)
+3. 点击复制。拉取其他公私镜像。
+   ![image](https://github.com/user-attachments/assets/1868c4c9-18a8-41c6-9875-e473f0be9422)
+
